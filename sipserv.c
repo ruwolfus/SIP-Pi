@@ -591,7 +591,7 @@ static void setup_sip(void)
 	pjsua_transport_config udpcfg;
 	pjsua_transport_config_default(&udpcfg);
 		
-	udpcfg.port = 5060;
+	udpcfg.port = 5065;
 	status = pjsua_transport_create(PJSIP_TRANSPORT_UDP, &udpcfg, NULL);
 	if (status != PJ_SUCCESS) error_exit("Error creating transport", status);
 	
@@ -821,6 +821,8 @@ static int callBash(char* command, char* result) {
 			log_message(" (Failed to read result) \n");
 		}
 	}
+	
+	if (fp) pclose(fp);
 
 	return error;
 }

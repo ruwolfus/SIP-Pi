@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # read the file and check, if the number is contained within.
 # Special precaution when chenging stuff: The first character printed must be the result: '1' = yes other = no
